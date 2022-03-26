@@ -18,14 +18,29 @@ public class HomeWork_3 {
 //        System.out.println("-----------");
 
         // 3
-//        int[] arrZeroOne = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-//        changeInArrayXTwo(arrZeroOne);
+//        int[] arrXTwo = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+//        changeInArrayXTwo(arrXTwo);
 //        System.out.println("-----------");
 
         // 4
-        createArrayXSquare(8);
+//        createArrayXSquare(8);
+//        System.out.println("-----------");
+
+        // 5
+        System.out.println(Arrays.toString(createArrayFill(6, "*")));
 
 
+
+    }
+
+    // 5 - создать одноменый массив и заполнить заданными значениями
+    private static String[] createArrayFill(int length, String value) {
+        String[] arr = new String[length];
+
+        for (int i = 0; i < length; i++) {
+            arr[i] = value;
+        }
+        return arr;
     }
 
     // 4 - создать квадратный двумерный массив и заполнить диагонали единицами 1, остальное, например, 0
@@ -87,6 +102,5 @@ public class HomeWork_3 {
         }
         System.out.println("After:\t" + Arrays.toString(arr));
     }
-
 
 }
