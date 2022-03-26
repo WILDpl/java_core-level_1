@@ -1,7 +1,5 @@
 package ru.gb.java_core.level_1;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Arrays;
 
 public class HomeWork_3 {
