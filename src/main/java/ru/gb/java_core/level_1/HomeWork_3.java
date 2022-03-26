@@ -20,12 +20,29 @@ public class HomeWork_3 {
 //        System.out.println("-----------");
 
         // 3
-        int[] arrZeroOne = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-        changeInArrayXTwo(arrZeroOne);
-        System.out.println("-----------");
+//        int[] arrZeroOne = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+//        changeInArrayXTwo(arrZeroOne);
+//        System.out.println("-----------");
+
+        // 4
+        createArrayXSquare(8);
 
 
+    }
 
+    // 4 - создать квадратный двумерный массив и заполнить диагонали единицами 1, остальное, например, 0
+    private static void createArrayXSquare(int length) {
+        int[][] arr = new int[length][length];
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if (i == j || arr.length - i - 1 == j) {
+                    arr[i][j] = 1;
+                }
+            System.out.print(arr[i][j] + "\t");
+            }
+            System.out.println();
+        }
     }
 
     // 3 - проверить массив и умножить на 2 значения меньше 6
