@@ -1,5 +1,7 @@
 package ru.gb.java_core.level_1;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Arrays;
 
 public class HomeWork_3 {
@@ -7,9 +9,27 @@ public class HomeWork_3 {
     public static void main(String[] args) {
 
         // 1
-        int[] arr = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
-        changeInArrayZeroOne(arr);
+//        System.out.println("-----------");
+//        int[] arrZeroOne = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+//        changeInArrayZeroOne(arrZeroOne);
+//        System.out.println("-----------");
 
+        // 2
+        int[] arrFill = new int[100];
+        arrayFullFill(arrFill);
+        System.out.println("-----------");
+
+
+
+
+
+    }
+
+    private static void arrayFullFill(int [] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i + 1;
+        }
+        System.out.println(Arrays.toString(arr));
     }
 
     // 1 - инвертировать в массиве (0 в 1) и (1 в 0)
