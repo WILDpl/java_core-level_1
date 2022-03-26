@@ -1,6 +1,7 @@
 package ru.gb.java_core.level_1;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class HomeWork_3 {
 
@@ -27,11 +28,34 @@ public class HomeWork_3 {
 //        System.out.println("-----------");
 
         // 5
-        System.out.println(Arrays.toString(createArrayFill(6, "*")));
+//        System.out.println(Arrays.toString(createArrayFill(6, "*")));
+//        System.out.println("-----------");
+
+        // 6*
+        int[] arrMinMax = createArrayWithRandomValuesRange(10, -100, 100);
+        System.out.println(Arrays.toString(arrMinMax));
+
+
 
 
 
     }
+
+    // генератор массива заданной длинны с заполнением значениями из заданного диапазона
+    public static int[] createArrayWithRandomValuesRange(int length, int lowBound, int highBound) {
+        int range = highBound - lowBound;
+        int[] arr = new int[length];
+        Random random = new Random();
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = lowBound + random.nextInt(range) + 1;
+        }
+
+        return  arr;
+    }
+
+
+
 
     // 5 - создать одноменый массив и заполнить заданными значениями
     private static String[] createArrayFill(int length, String value) {
