@@ -37,24 +37,26 @@ public class HomeWork_3 {
 //        System.out.println("-----------");
 
         // 7**
-        int[] arrBalance = createArrayWithRandomValuesRange(8, -10, 10);
-        // фиксированные примеры положительных результатов
-//        int[] arrBalance = {2, 2, 2, 1, 2, 2, 10, 1}; // true
-//        int[] arrBalance = {6, 4, 5, 6, 9, -5, -8, -5}; // true
-//        int[] arrBalance = {6, 9, 1, 2, 8, 5, 3, -2}; // true
-//        int[] arrBalance = {8, 7, -3, -1, 3, -6, 9, -1}; // true
-//        int[] arrBalance = {1, -1, -5, 2, -8, -6, 3, 4}; // true
-        System.out.println("Исходный массив: " + Arrays.toString(arrBalance));
-        arrayBalanceFull(arrBalance);
-        System.out.println("------");
-        System.out.println(arrayBalance(arrBalance));
+//        int[] arrBalance = createArrayWithRandomValuesRange(8, -10, 10);
+//        // фиксированные примеры положительных результатов
+////        int[] arrBalance = {2, 2, 2, 1, 2, 2, 10, 1}; // true
+////        int[] arrBalance = {6, 4, 5, 6, 9, -5, -8, -5}; // true
+////        int[] arrBalance = {6, 9, 1, 2, 8, 5, 3, -2}; // true
+////        int[] arrBalance = {8, 7, -3, -1, 3, -6, 9, -1}; // true
+////        int[] arrBalance = {1, -1, -5, 2, -8, -6, 3, 4}; // true
+//        System.out.println("Исходный массив: " + Arrays.toString(arrBalance));
+//        arrayBalanceFull(arrBalance);
+//        System.out.println("------");
+//        System.out.println(arrayBalance(arrBalance));
+//        System.out.println("-----------");
+
+        // 8***
+        int[] arrShift = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int shiftN = 2;
+        arrayShift(arrShift, shiftN);
         System.out.println("-----------");
 
-
     }
-
-
-
 
     // генератор массива заданной длинны с заполнением значениями из заданного диапазона
     public static int[] createArrayWithRandomValuesRange(int length, int lowBound, int highBound) {
@@ -67,6 +69,29 @@ public class HomeWork_3 {
         }
 
         return  arr;
+    }
+
+    // 8*** - сдвиг элементов массива влево (-) или вправо (+)
+    private static void arrayShift(int[] arr, int shift) {
+        System.out.println("Исходный массив:\t\t" + Arrays.toString(arr));
+        if (shift > 0) {
+            for (int i = 1; i <= shift; i++) {
+                int pos = arr[arr.length - 1];
+                for (int j = 1; j < arr.length; j++) {
+                    arr[arr.length - j] = arr[arr.length - j - 1];
+                }
+                arr[0] = pos;
+            }
+        } else if (shift < 0) {
+            for (int i = shift; i < 0; i++) {
+                int pos = arr[0];
+                for (int j = 0; j < arr.length - 1; j++) {
+                    arr[j] = arr[j + 1];
+                }
+                arr[arr.length - 1] = pos;
+            }
+        }
+        System.out.println("Сдвинутый массив: [" + shift + "]\t" + Arrays.toString(arr));
     }
 
     // 7** - проверка баланса значений в массиве, в котором сумма левой и правой части массива равны (FULL)
@@ -114,7 +139,6 @@ public class HomeWork_3 {
         int arrSum = 0;
         boolean result = false;
         int sum = 0;
-        int sumI = 0;
 
         for (int i = 0; i < arr.length; i++) {
             arrSum += arr[i];
