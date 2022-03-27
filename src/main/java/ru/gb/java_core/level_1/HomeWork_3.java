@@ -8,47 +8,47 @@ public class HomeWork_3 {
     public static void main(String[] args) {
 
         // 1
-//        System.out.println("-----------");
-//        int[] arrZeroOne = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
-//        changeInArrayZeroOne(arrZeroOne);
-//        System.out.println("-----------");
+        System.out.println("-----------");
+        int[] arrZeroOne = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+        changeInArrayZeroOne(arrZeroOne);
+        System.out.println("-----------");
 
         // 2
-//        int[] arrFill = new int[100];
-//        arrayFullFill(arrFill);
-//        System.out.println("-----------");
+        int[] arrFill = new int[100];
+        arrayFullFill(arrFill);
+        System.out.println("-----------");
 
         // 3
-//        int[] arrXTwo = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-//        changeInArrayXTwo(arrXTwo);
-//        System.out.println("-----------");
+        int[] arrXTwo = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        changeInArrayXTwo(arrXTwo);
+        System.out.println("-----------");
 
         // 4
-//        createArrayXSquare(8);
-//        System.out.println("-----------");
+        createArrayXSquare(9);
+        System.out.println("-----------");
 
         // 5
-//        System.out.println(Arrays.toString(createArrayFill(6, "*")));
-//        System.out.println("-----------");
+        System.out.println(Arrays.toString(createArrayFill(11, "*")));
+        System.out.println("-----------");
 
         // 6*
-//        int[] arrMinMax = createArrayWithRandomValuesRange(10, -100, 100);
-//        arrayMinMax(arrMinMax);
-//        System.out.println("-----------");
+        int[] arrMinMax = createArrayWithRandomValuesRange(10, -100, 100);
+        arrayMinMax(arrMinMax);
+        System.out.println("-----------");
 
-        // 7**
-//        int[] arrBalance = createArrayWithRandomValuesRange(8, -10, 10);
-//        // фиксированные примеры положительных результатов
-////        int[] arrBalance = {2, 2, 2, 1, 2, 2, 10, 1}; // true
-////        int[] arrBalance = {6, 4, 5, 6, 9, -5, -8, -5}; // true
-////        int[] arrBalance = {6, 9, 1, 2, 8, 5, 3, -2}; // true
-////        int[] arrBalance = {8, 7, -3, -1, 3, -6, 9, -1}; // true
-////        int[] arrBalance = {1, -1, -5, 2, -8, -6, 3, 4}; // true
-//        System.out.println("Исходный массив: " + Arrays.toString(arrBalance));
-//        arrayBalanceFull(arrBalance);
-//        System.out.println("------");
-//        System.out.println(arrayBalance(arrBalance));
-//        System.out.println("-----------");
+        // 7** - от рандома сбалансированным генерится, примерно, каждый 15-20 массив
+        int[] arrBalance = createArrayWithRandomValuesRange(8, -10, 10);
+        // фиксированные примеры положительных результатов
+//        int[] arrBalance = {2, 2, 2, 1, 2, 2, 10, 1}; // true
+//        int[] arrBalance = {6, 4, 5, 6, 9, -5, -8, -5}; // true
+//        int[] arrBalance = {6, 9, 1, 2, 8, 5, 3, -2}; // true
+//        int[] arrBalance = {8, 7, -3, -1, 3, -6, 9, -1}; // true
+//        int[] arrBalance = {1, -1, -5, 2, -8, -6, 3, 4}; // true
+        System.out.println("Исходный массив: " + Arrays.toString(arrBalance));
+        arrayBalanceFull(arrBalance);
+        System.out.println("-----");
+        System.out.println(arrayBalance(arrBalance));
+        System.out.println("-----------");
 
         // 8***
         int[] arrShift = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
@@ -131,7 +131,7 @@ public class HomeWork_3 {
         System.arraycopy (arr, sumI + 1, arrBalanceFillFinish, 0, arr.length - sumI - 1);
 //        System.out.println(Arrays.toString(arrBalanceFillFinish));
 
-        System.out.println("Конечный массив: " + Arrays.toString(arrBalanceFillStart) + "|||" + Arrays.toString(arrBalanceFillFinish));
+        System.out.println("Сбалансированный массив: " + Arrays.toString(arrBalanceFillStart) + "|||" + Arrays.toString(arrBalanceFillFinish));
     }
 
     // 7** - проверка баланса значений в массиве, в котором сумма левой и правой части массива равны (только return)
@@ -172,7 +172,7 @@ public class HomeWork_3 {
             }
         }
         System.out.println(Arrays.toString(arr));
-        System.out.printf("Минимальный элемент массива: %d [%d]\nМаксимальный элемент массива: %d [%d]\n", minI, min, maxI, max);
+        System.out.printf("Минимальный элемент массива:\t%d [%d]\nМаксимальный элемент массива:\t%d [%d]\n", minI, min, maxI, max);
     }
 
     // 5 - создать одноменый массив и заполнить заданными значениями
