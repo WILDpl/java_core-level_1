@@ -44,58 +44,15 @@ public class HomeWork_3 {
 //        int[] arrBalance = {6, 9, 1, 2, 8, 5, 3, -2}; // true
 //        int[] arrBalance = {8, 7, -3, -1, 3, -6, 9, -1}; // true
 //        int[] arrBalance = {1, -1, -5, 2, -8, -6, 3, 4}; // true
-        System.out.println(Arrays.toString(arrBalance));
+        System.out.println("Исходный массив: " + Arrays.toString(arrBalance));
+        arrayBalanceFull(arrBalance);
+        System.out.println("------");
+        System.out.println(arrayBalance(arrBalance));
+        System.out.println("-----------");
 
-        int arrSum = 0;
-        boolean result = false;
-        int sum = 0;
-        int sumI = 0;
 
-        for (int i = 0; i < arrBalance.length; i++) {
-            arrSum += arrBalance[i];
-        }
-        System.out.println("Сумма массива: " + arrSum);
-        System.out.println("Сумма массива / 2: " + arrSum / 2);
-        System.out.println();
-
-        for (int i = 0; i < arrBalance.length; i++) {
-            sum += arrBalance[i];
-//            if (arrSum % 2 == 0 && sum < arrSum / 2) {
-//                sumI = -1;
-//            } else if (arrSum % 2 == 0 && sum == arrSum / 2) {
-//                sumI = i;
-//                result = true;
-//                break;
-//            } else if (arrSum % 2 != 0 || sum > arrSum / 2) {
-//                sumI = -1;
-//                break;
-//            } else {
-//                sumI = -1;
-//            }
-            if (arrSum % 2 == 0 && sum == arrSum / 2) {
-                sumI = i;
-                result = true;
-                break;
-            } else {
-                sumI = -1;
-            }
-        }
-
-        System.out.println("Сумма подсчитываемых элементов массива: " + sum);
-        System.out.println("Элемент стопа: " + sumI);
-        System.out.println("Результат: " + result);
-        System.out.println();
-
-        int[] arrBalanceFillStart = new int[sumI + 1];
-        System.arraycopy (arrBalance, 0, arrBalanceFillStart, 0, sumI + 1);
-//        System.out.println(Arrays.toString(arrBalanceFillStart));
-
-        int[] arrBalanceFillFinish = new int[arrBalance.length - sumI - 1];
-        System.arraycopy (arrBalance, sumI + 1, arrBalanceFillFinish, 0, arrBalance.length - sumI - 1);
-//        System.out.println(Arrays.toString(arrBalanceFillFinish));
-
-        System.out.println(Arrays.toString(arrBalanceFillStart) + "|||" + Arrays.toString(arrBalanceFillFinish));
     }
+
 
 
 
@@ -112,7 +69,67 @@ public class HomeWork_3 {
         return  arr;
     }
 
-    // 7** -
+    // 7** - проверка баланса значений в массиве, в котором сумма левой и правой части массива равны (FULL)
+    private static void arrayBalanceFull(int[] arr) {
+        int arrSum = 0;
+        boolean result = false;
+        int sum = 0;
+        int sumI = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            arrSum += arr[i];
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+
+            if (arrSum % 2 == 0 && sum == arrSum / 2) {
+                sumI = i;
+                result = true;
+                break;
+            } else {
+                sumI = -1;
+            }
+        }
+
+        System.out.println("Сумма массива: " + arrSum);
+        System.out.println("Сумма массива (/ 2): " + arrSum / 2);
+        System.out.println("Сумма подсчитываемых элементов массива: " + sum);
+        System.out.println("Элемент стопа: " + sumI);
+        System.out.println("Результат: " + result);
+
+        int[] arrBalanceFillStart = new int[sumI + 1];
+        System.arraycopy (arr, 0, arrBalanceFillStart, 0, sumI + 1);
+//        System.out.println(Arrays.toString(arrBalanceFillStart));
+
+        int[] arrBalanceFillFinish = new int[arr.length - sumI - 1];
+        System.arraycopy (arr, sumI + 1, arrBalanceFillFinish, 0, arr.length - sumI - 1);
+//        System.out.println(Arrays.toString(arrBalanceFillFinish));
+
+        System.out.println("Конечный массив: " + Arrays.toString(arrBalanceFillStart) + "|||" + Arrays.toString(arrBalanceFillFinish));
+    }
+
+    // 7** - проверка баланса значений в массиве, в котором сумма левой и правой части массива равны (только return)
+    private static boolean arrayBalance(int[] arr) {
+        int arrSum = 0;
+        boolean result = false;
+        int sum = 0;
+        int sumI = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            arrSum += arr[i];
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+
+            if (arrSum % 2 == 0 && sum == arrSum / 2) {
+                result = true;
+                break;
+            }
+        }
+        return result;
+    }
 
     // 6* - найти минимальный и максимальный элемент массива
     private static void arrayMinMax(int[] arr) {
