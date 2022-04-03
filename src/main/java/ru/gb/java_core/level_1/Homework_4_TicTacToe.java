@@ -361,7 +361,7 @@ public class Homework_4_TicTacToe {
 
         // отрисовываем последнюю строку "-------"
 
-        int lastLine = 0;
+        int lastLine;
 
         if (fieldSizeX > 9) {
             lastLine = 3 + 9 * 2 + (fieldSizeX - 9) * 3;
