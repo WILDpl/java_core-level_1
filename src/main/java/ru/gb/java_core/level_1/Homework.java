@@ -34,6 +34,7 @@ public class Homework {
 
         System.out.println();
 
+        System.out.println("Born of animals: " + Animal.getCountAnimal());
         System.out.println("Born of cats: " + Cat.getCountCat());
         System.out.println("Born of dogs " + Dog.getCountDog());
 

@@ -3,11 +3,13 @@ package ru.gb.java_core.level_1;
 public abstract class Animal extends Object {
 
     protected String name;
+    private static int countAnimal = 0;
 //    protected int distance;
 //    int countAnimal;
 
     public Animal() {
         System.out.println("Animal born!");
+        countAnimal++;
     }
 
     public Animal(String name) {
@@ -19,6 +21,9 @@ public abstract class Animal extends Object {
 
     public abstract void swim(int distance);
 
+    public static int getCountAnimal() {
+        return countAnimal;
+    }
 }
 
 
