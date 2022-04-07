@@ -4,7 +4,7 @@ public abstract class Animal extends Object {
 
     protected String name;
 //    protected int distance;
-    int countAnimal;
+//    int countAnimal;
 
     public Animal() {
         System.out.println("Animal born!");
