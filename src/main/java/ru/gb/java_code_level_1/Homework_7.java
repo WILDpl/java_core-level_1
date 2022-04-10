@@ -27,7 +27,7 @@ public class Homework_7 {
             if (!cats[i].isSatiety()) {
                 plate.promotionFood(rndN(150, 200));
                 i--;
-            };
+            }
         }
 
         plate.getFood();
