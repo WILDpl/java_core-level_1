@@ -11,7 +11,7 @@ public class Plate {
 
     // метод убывания еды из миски
     public boolean decreaseFood(int amount) {
-        if (foodAmount >= amount) { // еда в миске не может уйти в минус
+        if (foodAmount >= amount) {  // еда в миске не может уйти в минус
             foodAmount -= amount;
             System.out.printf("Из тарелки убыло еды: -%d (%d/%d). ", amount, foodAmount, volume);
             return true;

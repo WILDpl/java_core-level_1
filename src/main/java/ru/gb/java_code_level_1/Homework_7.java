@@ -30,7 +30,7 @@ public class Homework_7 {
         for (int i = 0; i < cats.length; i++) {
             cats[i].eat(plate); // кормим кота
             if (!cats[i].isSatiety()) { // если не сыт
-                plate.promotionFood(rndN(150, 200)); // насыпаем еду в миску
+                plate.promotionFood(rndN(150, 200)); // добавляем еду в миску
                 i--; // заново кормим кота
             }
         }
