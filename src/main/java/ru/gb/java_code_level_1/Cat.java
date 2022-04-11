@@ -12,8 +12,9 @@ public class Cat {
         this.satiety = satiety;
     }
 
+    // метод кормления кота
     public void eat(Plate plate) {
-        if (plate.decreaseFood(appetite)) {
+        if (plate.decreaseFood(appetite)) { // кормим кота с определенным аппетитом из миски
             this.satiety = true;
             System.out.printf("Кот %s съел %d еды. %s сыт.\n", name, appetite, name);
         } else {
