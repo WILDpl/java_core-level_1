@@ -1,14 +1,12 @@
-package ru.gb.java_core.level_1;
+package ru.gb.java_core.level_1.Homework_7;
 
-import ru.gb.java_core.level_1.*;
-
-public class Cats {
+public class Cat {
     private String name;
     private int appetite;
     private boolean satiety;
 
 
-    public Cats(String name, int appetite, boolean satiety) {
+    public Cat(String name, int appetite, boolean satiety) {
         this.name = name;
         this.appetite = appetite;
         this.satiety = satiety;

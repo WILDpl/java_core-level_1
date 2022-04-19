@@ -1,6 +1,6 @@
-package ru.gb.java_core.level_1;
+package ru.gb.java_core.level_1.Homework_6;
 
-public class Homework {
+public class Homework_6 {
 
     public static void main(String[] args) {
 

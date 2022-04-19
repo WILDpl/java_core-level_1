@@ -1,4 +1,4 @@
-package ru.gb.java_core.level_1;
+package ru.gb.java_core.level_1.Homework_8;
 
 import javax.swing.*;
 import java.awt.*;
