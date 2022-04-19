@@ -1,4 +1,4 @@
-package ru.gb.java_code_level_1;
+package ru.gb.java_core.level_1;
 
 public class Plate {
     private static int volume;
